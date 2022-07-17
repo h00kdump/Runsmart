@@ -19,6 +19,17 @@
             text-align: center;
         }
     }
+    .consultation {
+        &__descr {
+            text-align: center;
+        }
+        .feed-form {
+            margin: 36px auto 0px;
+        }
+        .title_left {
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width: 767px) {
@@ -83,6 +94,19 @@
             }
         }
 
+    }
+    .consultation {
+        min-height: auto;
+        padding: 40px 0 40px;
+        &__descr {
+            font-size: 15px;            
+        }
+        .title_left {
+            font-size: 30px;
+        }
+        .feed-form {
+            margin-top: 20px;
+        }
     }
 
 }
