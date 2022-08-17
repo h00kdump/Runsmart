@@ -23,7 +23,20 @@ const slider = tns({
   slideBy: 'page',
   autoplay: false,
   controls: false,
-  nav: false
+  nav: false,
+  responsive: {
+    640: {
+      nav: true,
+      items: 1
+    },
+    700: {
+      nav: true,
+    },
+    900: {
+      nav: true,
+      items: 1
+    }
+  }
 });
 
 document.querySelector('.prev').addEventListener('click', function () {
@@ -33,3 +46,4 @@ document.querySelector('.prev').addEventListener('click', function () {
 document.querySelector('.next').addEventListener('click', function () {
   slider.goTo('next');
 });
+

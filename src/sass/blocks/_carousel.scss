@@ -2,7 +2,7 @@
     padding: 108px 0;
     &__inner {
         position: relative;
-        width: 750px;
+        /* width: 750px; */
         margin: 0 auto;
     }
     .prev, .next {
@@ -10,7 +10,7 @@
         background: none;
         position: absolute;
         top: 50%;
-        left: -66px;
+        left: 22px;
         transform: translateY(-50%);
         img {
             width: 31px;
@@ -20,7 +20,7 @@
     }
     .next {
         left: auto;
-        right: -66px;
+        right: 22px;
         img {
             width: 30px;
             height: 50px;
@@ -32,5 +32,30 @@
     img {
         display: block;
         margin: 0 auto;
+        /* width: 400px; */
     }
 }
+
+/* .tns-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .tns-nav {
+        order: 1;
+        button {
+            background-color: #0d0d0d;
+            border: none;
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+        }
+        .tns-nav-active {
+            background-color: #c70101;
+        }
+    }
+
+} */
+
+
+
