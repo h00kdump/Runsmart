@@ -1,55 +1,35 @@
+/* $(document).ready(function(){
+    $('.carousel__inner').slick({
+        infinite: true,
+        speed: 1200,
+        adaptiveHeight: false,
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow_left.svg" alt="prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow_right.svg" alt="next"></button>',
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                dots: true,
+                arrows: false
+              }
+            }
+        ]
+      });
+  }); */
 
-/* let number = 7;
-const pi = 3.14;
+const slider = tns({
+  container: '.carousel__inner',
+  items: 1,
+  slideBy: 'page',
+  autoplay: false,
+  controls: false,
+  nav: false
+});
 
-console.log(number); */
+document.querySelector('.prev').addEventListener('click', function () {
+  slider.goTo('prev');
+});
 
-/* let answer = confirm('Вам есть 18 лет?');
-console.log(answer); */
-
-/* let answer = prompt('Вам есть 18 лет?','');
-console.log(answer); */
-
-// let isChecked = true,
-//     isClosed = false;
-
-/* console.log(isChecked == isClosed);
- */
-
-// console.log(isChecked || isClosed);
-
-// if (2*4 == 12*1) {
-//     console.log("Верно");
-// } else {
-//     console.log("Ошибка");
-// }
-
-// let answer = confirm('Вам есть 18 лет?');
-
-// if (answer) {
-//     console.log("Проходите");
-// } else {
-//     console.log ("Уходите");
-// }
-
-// const num = 50;
-
-// if (num < 49) {
-//     console.log("Неправильно");
-// } else if (num > 100) {
-//     console.log("Много");
-// } else {
-//     console.log("Верно");
-// }
-
-// for (let i = 1; i < 8; i++) {
-//     console.log(i);
-// }
-
-function logging(a,b) {
-    console.log( a + b );
-}
-
-logging(3,8);
-
-logging(28,88);s
+document.querySelector('.next').addEventListener('click', function () {
+  slider.goTo('next');
+});
