@@ -48,6 +48,46 @@
             width: 500px;
         }
     }
+    .carousel {
+        padding: 40px 0px;
+    }
+    .reviews {
+        padding: 0px 0px 30px;
+        &__one {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        &__content {
+            text-align: center;
+        }
+        &__img {
+            margin-right: 0px;
+            margin-bottom: 30px;
+        }
+        &__descr {
+            font-size: 14px;
+            max-width: 500px;
+        }
+    }
+    .catalog {
+        padding-bottom: 30px;
+        &__tabs {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+        &__tab {
+            margin: 5px 0px;
+        }
+        &__content {
+            margin-top: 30px;
+            justify-content: center;
+        }
+        &-item {
+            margin: 5px;
+        }
+    }
 }
 
 @media (max-width: 575px) {
