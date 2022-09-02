@@ -47,8 +47,13 @@
             border: 2px solid #FFFFFF;
             border-radius: 100%;
             margin: 0 15px;
+            transition: 0.2s all;
             img {
                 height: 26px;
+            }
+            &:hover {
+                /* transform: scale(110%); */
+                background: #F30C0C;
             }
         }
     }

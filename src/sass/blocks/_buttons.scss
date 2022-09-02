@@ -10,6 +10,7 @@
     border-radius: 5px;
     background: $main-color;
     border: none;
+    transition: 0.2s all;
     &_main {
         margin-top: 65px;
         width: 300px;
@@ -28,6 +29,11 @@
         width: 135px;
         height: 44px;
         font-size: 14px;
+    }
+    &:hover{
+        background: #F30C0C;
+        /* transform: scale(110%); */
+        /* box-shadow: 0px 10px 10px hsla(0, 0.00%, 0.00%, 0.20); */
     }
 
 }

@@ -28,7 +28,9 @@
         cursor: pointer;
         transition: 0.5s all;
         &:hover {
-            box-shadow: 0px 10px 10px hsla(0, 0.00%, 0.00%, 0.20);
+            background: #F30C0C;
+            color: #fff;
+            /* box-shadow: 0px 10px 10px hsla(0, 0.00%, 0.00%, 0.20); */
         }
         div {
             transform: skewX(25deg);

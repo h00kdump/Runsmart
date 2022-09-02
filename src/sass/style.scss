@@ -10,11 +10,14 @@
 @import 'blocks/catalog';
 @import 'blocks/reviews';
 @import 'blocks/footer';
+@import 'blocks/modal';
 @import 'blocks/media';
 
 
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
