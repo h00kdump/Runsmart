@@ -195,5 +195,18 @@
             }
         }
     }
+    .feed-form {
+        width: 260px;
+    }
+    .modal {
+        padding: 20px 20px 20px;
+        width: 300px;
+        &__close {
+            top: -40px;
+            left: 50%;
+            right: 50%;
+            transform: translateX(-50%);
+        }
+    }
 
 }

@@ -101,6 +101,10 @@ $(document).ready(function(){
           $('.overlay, #order').fadeIn('fast');
         })
       });
+
+      $('#consultation-form').validate();
+      $('#consultation form').validate();
+      $('#order form').validate();
     
 
   });
