@@ -41,6 +41,16 @@
         top: 0px;
         right: -40px;
     }
+    .error {
+        border: 1px red solid;
+        text-align: center;
+        font-size: 12px;
+    }
+    label.error {
+        border: none;
+        margin-top: -16px;
+        color: red;
+    }
 }
 
 #consultation, #order, #thanks {

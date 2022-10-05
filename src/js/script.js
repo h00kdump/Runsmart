@@ -102,10 +102,40 @@ $(document).ready(function(){
         })
       });
 
-      $('#consultation-form').validate();
-      $('#consultation form').validate();
-      $('#order form').validate();
-    
 
+      function validateForm(form) {
+        $(form).validate({
+          rules: {
+            // simple rule, converted to {required:true}
+            name: {
+              required: true,
+              minlength: 2
+            },
+            phone: "required",
+            email: {
+              required: true,
+              email: true
+            }
+          },
+  
+          messages: {
+            name: {
+              required: "Введите ваше имя",
+              minlength: jQuery.validator.format("Количество символов не менее {0}")
+            },
+            phone: "Введите ваш номер телефона",
+            email: {
+              required: "Введите ваш e-mail адрес",
+              email: "Введите корректный e-mail адрес"
+            }
+          }
+  
+        });
+      };
+
+      validateForm('#consultation-form');
+      validateForm('#consultation form');
+      validateForm('#order form');
+    
   });
 
