@@ -10,7 +10,7 @@
 /build
 
 # mail sending
-/mailer
+/src/mailer
 
 # misc
 .DS_Store
