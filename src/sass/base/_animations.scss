@@ -1,0 +1,41 @@
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateicon {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes cup {
+    from {
+        transform:translateX(0);
+    }
+    25% {
+        transform:translateX(-12px);
+    }
+    50% {
+        transform:translateX(0);
+    }
+    75% {
+        transform:translateX(12px);
+    }
+    100% {
+        transform:translateX(0);
+    }
+
+    
+}

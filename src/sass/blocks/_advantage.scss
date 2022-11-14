@@ -28,5 +28,37 @@
             line-height: 29px;
             color: #0D0D0D;
         }
+        &_animated {
+            img {
+              animation: heartbeat 1.5s ease infinite;
+              /* animation-name: heartbeat;
+              animation-duration: 1.5s;
+              animation-timing-function: ease;
+              animation-iteration-count: infinite; */
+            }
+            :hover {
+                animation-play-state: paused;
+              }
+        }
+
+        &_rotated {
+            img {
+                animation: rotateicon 1.5s ease infinite;
+            }
+            :hover {
+                animation-play-state: paused;
+              }
+        }
+
+        &_moved {
+            img {
+                animation: cup 1.5s linear infinite;
+            }
+            :hover {
+                animation-play-state: paused;
+              }
+        }
+    
+
     }
 }
