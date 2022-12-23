@@ -4,8 +4,8 @@ const sass        = require('gulp-sass')(require('sass'));
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
-const imagemin = require('gulp-imagemin');
-const htmlmin = require('gulp-htmlmin');
+const imagemin      = require('gulp-imagemin');
+const htmlmin       = require('gulp-htmlmin');
 
 gulp.task('server', function() {
 
@@ -29,40 +29,40 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
-    gulp.watch("src/*.html").on('change', gulp.parallel('html'));
-});
+    gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
+    gulp.watch("src/*.html").on("change", gulp.parallel('html'));
+})
 
-gulp.task('html', function () {
-    return gulp.src("src/*.html")
-        .pipe(htmlmin({ collapseWhitespace: true }))
+gulp.task('html', function() {
+    return gulp.src("src/**/*.+(html|htm)")
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest("dist/"));
 });
 
-gulp.task('scripts', function () {
-    return gulp.src("src/js/**/*.js")
+gulp.task('scripts', function() {
+    return gulp.src("src/js/**/*.+(js)")
         .pipe(gulp.dest("dist/js"));
 });
 
-gulp.task('fonts', function () {
-    return gulp.src("src/fonts/**/*")
+gulp.task('fonts', function() {
+    return gulp.src("src/fonts/**/*.+(woff|woff2)")
         .pipe(gulp.dest("dist/fonts"));
 });
 
-gulp.task('icons', function () {
-    return gulp.src("src/icons/**/*")
+gulp.task('icons', function() {
+    return gulp.src("src/icons/**/*.+(svg|png)")
         .pipe(gulp.dest("dist/icons"));
 });
 
-gulp.task('mailer', function () {
-    return gulp.src("src/mailer/**/*")
+gulp.task('mailer', function() {
+    return gulp.src("src/mailer/**/*.+(php|md|dist)")
         .pipe(gulp.dest("dist/mailer"));
 });
 
-gulp.task('images', function () {
-    return gulp.src("src/img/**/*")
+gulp.task('images', function() {
+    return gulp.src("src/img/**/*.+(png|jpg)")
         .pipe(imagemin())
         .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'mailer', 'html', 'images'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'html', 'scripts', 'fonts', 'icons', 'mailer', 'images'));
